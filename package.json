@@ -1,0 +1,25 @@
+{
+  "name": "yesod-whamlet-julius-quasiquotes",
+  "displayName": "yesod-whamlet-julius-quasiquotes",
+  "description": "It's a support for different syntax highlighting inside quasiquotes in yesod",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "yesod",
+      "aliases": ["yesod - Quasi Html JS", "yesod"],
+      "extensions": [".hs"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "yesod",
+      "scopeName": "source.yesod",
+      "path": "./syntaxes/yesod.tmLanguage.json"
+    }]
+  }
+}
