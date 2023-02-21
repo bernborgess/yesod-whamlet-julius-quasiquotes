@@ -3,27 +3,33 @@
 	"name": "yesod - Quasi Html JS",
 	"patterns": [
 		{
-			"include": "#keywords"
+			"include": "#julius"
 		},
 		{
-			"include": "#strings"
+			"include": "#whamlet"
+		},
+		{
+			"include": "#haskell"
 		}
 	],
 	"repository": {
-		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.yesod",
-				"match": "\\b(if|while|for|return)\\b"
-			}]
-		},
-		"strings": {
-			"name": "string.quoted.double.yesod",
-			"begin": "\"",
-			"end": "\"",
+		"julius": {
+			"name": "source.js.yesod",
+			"begin": "\\[julius\\|",
+			"end": "\\|\\]",
 			"patterns": [
 				{
-					"name": "constant.character.escape.yesod",
-					"match": "\\\\."
+					"include": "source.js"
+				}
+			]
+		},
+		"whamlet": {
+			"name": "text.html.basic.yesod",
+			"begin": "\\[whamlet\\|",
+			"end": "\\|\\]",
+			"patterns": [
+				{
+					"include": "text.html.basic"
 				}
 			]
 		}
